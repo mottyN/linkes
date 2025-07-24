@@ -13,4 +13,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`השרת פועל על פ
+  console.log(`השרת פועל על פורט ${PORT} ומפנה לקבוצת וואצאפ`);
+});
