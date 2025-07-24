@@ -1,0 +1,21 @@
+{
+  "name": "linkes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "link.js",
+"scripts": {
+  "start": "node index.js"
+}
+  ,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mottyN/linkes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mottyN/linkes/issues"
+  },
+  "homepage": "https://github.com/mottyN/linkes#readme"
+}
