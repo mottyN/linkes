@@ -1,17 +1,17 @@
-const express = require('express');
-const app = express();
+const http = require('http');
 
-// הפורט צריך להיות מה־ENV כדי לעבוד בענן כמו Render
 const PORT = process.env.PORT || 3000;
 
-// כתובת הקבוצה שלך בווצאפ
-const whatsappGroupLink = 'https://chat.whatsapp.com/Ecxmzq9SjWlJmKws4qM9OX?mode=ac_t';
+const whatsappGroupLink = encodeURI('https://chat.whatsapp.com/Ecxmzq9SjWlJmKws4qM9OX');
 
-// כל בקשה תופנה לכתובת הוואצאפ
-app.get('*', (req, res) => {
-  res.redirect(whatsappGroupLink);
+const server = http.createServer((req, res) => {
+  res.writeHead(302, {
+    'Location': whatsappGroupLink,
+    'Content-Type': 'text/plain'
+  });
+  res.end('מועבר לקבוצת הוואצאפ...');
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`השרת פועל על פורט ${PORT} ומפנה לקבוצת וואצאפ`);
 });
