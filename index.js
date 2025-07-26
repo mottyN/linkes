@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 const whatsappGroupLink = encodeURI('https://chat.whatsapp.com/Ecxmzq9SjWlJmKws4qM9OX');
 
 const server = http.createServer((req, res) => {
-  res.writeHead(301, {
+  res.writeHead(307, {
     'Location': whatsappGroupLink,
     'Content-Type': 'text/plain'
   });
