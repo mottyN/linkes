@@ -2,7 +2,7 @@ const http = require('http');
 
 const PORT = process.env.PORT || 3000;
 
-const whatsappGroupLink = encodeURI('https://www.kore.co.il/');
+const whatsappGroupLink = encodeURI('https://chat.whatsapp.com/Ecxmzq9SjWlJmKws4qM9OX');
 
 const server = http.createServer((req, res) => {
   res.writeHead(301, {
